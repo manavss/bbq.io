@@ -1,0 +1,150 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1rem;
+  color: #404040;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.25rem;
+  font-weight: 300;
+  color: #fff;
+  margin: 0;
+}
+
+h1 + p {
+  color: #f18119;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin: 0;
+  font-size: 1.3125rem;
+}
+h2 {
+  font-size: 1.3125rem;
+  margin: 0;
+}
+h2 + p {
+  color: #f18119;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-top: 0;
+}
+.top-text {
+  font-size: 0.625rem;
+  font-weight: 900;
+  color: #f18119;
+  text-transform: uppercase;
+  order: -1;
+  border-top: 5px solid #f18119;
+  border-image: linear-gradient(to left, #ff713b, #ffa51d) 1;
+  line-height: 1.5;
+}
+
+.fine-print {
+  font-size: 0.625rem;
+  letter-spacing: 1;
+}
+strong {
+  font-weight: 900;
+}
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #404040;
+  background-image: url(./images/ribs.jpg);
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position: center;
+  padding: 0 0.25em 1em;
+  min-height: 50vh;
+}
+
+.main-content {
+  padding: 2em 1em;
+}
+.intro > *,
+.main-content > * {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* form */
+
+.email-collector {
+  width: 80%;
+  max-width: 300px;
+}
+.btn,
+input {
+  width: 80%;
+
+  border-radius: 5px;
+}
+input {
+  font-family: inherit;
+  margin: 0.5rem;
+  text-align: center;
+  padding: 0.25rem;
+  border: 1px solid #404040;
+}
+
+.btn {
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 1em 1.5em;
+  font-size: 0.625rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+  border: 0;
+  cursor: pointer;
+}
+.btn-primary {
+  background-image: linear-gradient(to left, #ff713b, #ffa51d);
+  color: #fff;
+}
+input,
+.btn-primary {
+  transform: scale(1);
+  transition: transform 250ms;
+}
+.btn-primary:hover,
+.btn-primary:focus,
+input:hover,
+input:focus {
+  transform: scale(1.1);
+}
+
+/* media queries */
+
+@media (min-width: 675px) {
+  body {
+    font-size: 1.125rem;
+  }
+  h1 {
+    font-size: 3.5rem;
+  }
+  h2,
+  h1 + p {
+    font-size: 1.75rem;
+  }
+  .container {
+    display: flex;
+  }
+  .intro,
+  .main-content {
+    width: 50%;
+    min-height: 100vh;
+  }
+
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
